@@ -13,6 +13,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Set document title
+  useEffect(() => {
+    document.title = 'Finance Tracker';
+  }, []);
+
   // Load transactions from localStorage on component mount
   useEffect(() => {
     try {
